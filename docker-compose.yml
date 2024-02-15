@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  ionic:
+    build: .
+    ports:
+      - 8100:8100
+    volumes:
+      - .:/opt/dockerized-ionic-app
+      - /opt/dockerized-ionic-app/node_modules
+    environment:
+      - PORT=8100
